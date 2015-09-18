@@ -18,10 +18,9 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
         "jms/serializer-bundle": "~1.0",
-        "guzzlehttp/guzzle": "^6.1",
+        "guzzlehttp/guzzle": "~6.1",
         "jms/serializer": "^1.0",
-        "phpunit/phpunit": "~4.8",
-        "eightpoints/guzzle-bundle": "^4.1"
+        "phpunit/phpunit": "~4.8"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
