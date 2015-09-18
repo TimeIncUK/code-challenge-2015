@@ -3,7 +3,6 @@
 namespace TimeInc\CatsVsDogsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class HomepageController
@@ -11,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class HomepageController extends Controller
 {
-    public function homepageAction(Request $request)
+    public function homepageAction()
     {
         $animalClient = $this->get('animal_provider');
 
