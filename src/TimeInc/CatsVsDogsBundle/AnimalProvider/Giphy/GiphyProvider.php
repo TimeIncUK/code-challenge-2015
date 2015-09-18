@@ -76,7 +76,7 @@ class GiphyProvider implements ProviderInterface
         $animal->setWidth($payload['data']['image_width']);
         $animal->setHeight($payload['data']['image_height']);
 
-        return $payload;
+        return $animal;
     }
 
     /**
