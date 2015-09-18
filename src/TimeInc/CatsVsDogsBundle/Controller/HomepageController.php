@@ -17,7 +17,7 @@ class HomepageController extends Controller
 
         return $this->render('TimeIncCatsVsDogsBundle:Homepage:homepage.html.twig', [
             'cat' => $animalClient->fetchCat(),
-            'dog' => $animalClient->fetchCat(),
+            'dog' => $animalClient->fetchDog(),
         ]);
     }
 }
