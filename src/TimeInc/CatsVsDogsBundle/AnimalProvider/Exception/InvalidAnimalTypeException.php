@@ -1,15 +1,14 @@
 <?php
+
 namespace TimeInc\CatsVsDogsBundle\AnimalProvider\Exception;
 
 /**
- * Class InvalidAnimalTypeException
- *
- * @package TimeInc\CatsVsDogsBundle\AnimalProvider\Exception
+ * Class InvalidAnimalTypeException.
  */
 class InvalidAnimalTypeException extends \Exception
 {
     /**
-     * Override the constructor to build a more useful error message
+     * Override the constructor to build a more useful error message.
      *
      * @param string     $attemptedType The animal we're trying with
      * @param array      $expectedTypes The allowed types of animals

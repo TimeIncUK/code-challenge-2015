@@ -5,9 +5,7 @@ namespace TimeInc\CatsVsDogsBundle\AnimalProvider\Exception;
 use Exception;
 
 /**
- * Class AnimalRetrievalFailed
- *
- * @package TimeInc\CatsVsDogsBundle\AnimalProvider\Exception
+ * Class AnimalRetrievalFailed.
  */
 class AnimalRetrievalFailed extends \Exception
 {

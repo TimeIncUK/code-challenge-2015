@@ -1,13 +1,12 @@
 <?php
+
 namespace TimeInc\CatsVsDogsBundle\Tests\AnimalProvider\Giphy;
 
 use GuzzleHttp\Client;
 use TimeInc\CatsVsDogsBundle\AnimalProvider\Giphy\GiphyProvider;
 
 /**
- * Class GiphyProviderTest
- *
- * @package TimeInc\CatsVsDogsBundle\Tests\AnimalProvider\Giphy
+ * Class GiphyProviderTest.
  */
 class GiphyProviderTest extends \PHPUnit_Framework_TestCase
 {
@@ -17,7 +16,7 @@ class GiphyProviderTest extends \PHPUnit_Framework_TestCase
     private $client;
 
     /**
-     * Setup the client for both tests
+     * Setup the client for both tests.
      */
     public function setUp()
     {
@@ -28,7 +27,7 @@ class GiphyProviderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Tests retrieving a cat
+     * Tests retrieving a cat.
      */
     public function testFetchCat()
     {
@@ -66,7 +65,7 @@ class GiphyProviderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Tests retrieving a dog
+     * Tests retrieving a dog.
      */
     public function testFetchDog()
     {
@@ -105,9 +104,7 @@ class GiphyProviderTest extends \PHPUnit_Framework_TestCase
 }
 
 /**
- * Class ResponseFake
- *
- * @package TimeInc\CatsVsDogsBundle\Tests\AnimalProvider\Giphy
+ * Class ResponseFake.
  */
 class ResponseFake
 {

@@ -12,9 +12,7 @@ use TimeInc\CatsVsDogsBundle\Document\Cat;
 use TimeInc\CatsVsDogsBundle\Document\Dog;
 
 /**
- * Class GiphyProvider
- *
- * @package TimeInc\CatsVsDogsBundle\AnimalProvider\Giphy
+ * Class GiphyProvider.
  */
 class GiphyProvider implements ProviderInterface
 {
@@ -39,7 +37,7 @@ class GiphyProvider implements ProviderInterface
      */
     public function __construct(Client $httpClient, $giphyApiKey)
     {
-        $this->httpClient  = $httpClient;
+        $this->httpClient = $httpClient;
         $this->giphyApiKey = $giphyApiKey;
     }
 
@@ -50,7 +48,7 @@ class GiphyProvider implements ProviderInterface
     {
         $response = $this->doApiRequest(self::TYPE_CAT);
 
-        $payload = json_decode((string)$response->getBody(), true);
+        $payload = json_decode((string) $response->getBody(), true);
 
         $animal = new Cat();
         $animal->setId($payload['data']['id']);
@@ -68,7 +66,7 @@ class GiphyProvider implements ProviderInterface
     {
         $response = $this->doApiRequest(self::TYPE_DOG);
 
-        $payload = json_decode((string)$response->getBody(), true);
+        $payload = json_decode((string) $response->getBody(), true);
 
         $animal = new Dog();
         $animal->setId($payload['data']['id']);
@@ -76,11 +74,11 @@ class GiphyProvider implements ProviderInterface
         $animal->setWidth($payload['data']['image_width']);
         $animal->setHeight($payload['data']['image_height']);
 
-        return $payload;
+        return $animal;
     }
 
     /**
-     * Make a request to the API and return an animal
+     * Make a request to the API and return an animal.
      *
      * @param $type
      *
@@ -91,7 +89,7 @@ class GiphyProvider implements ProviderInterface
      */
     protected function doApiRequest($type)
     {
-        if ($type !== self::TYPE_FISH && $type !== self::TYPE_DOG) {
+        if ($type !== self::TYPE_CAT && $type !== self::TYPE_DOG) {
             throw new InvalidAnimalTypeException($type, [self::TYPE_CAT, self::TYPE_DOG]);
         }
 
@@ -101,7 +99,7 @@ class GiphyProvider implements ProviderInterface
                 [
                     'query' => [
                         'api_key' => $this->giphyApiKey,
-                        'tag'     => $type,
+                        'tag' => $type,
                     ],
                 ]
             );

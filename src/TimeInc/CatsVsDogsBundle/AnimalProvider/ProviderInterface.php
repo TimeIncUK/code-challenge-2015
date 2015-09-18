@@ -6,9 +6,7 @@ use TimeInc\CatsVsDogsBundle\Document\Cat;
 use TimeInc\CatsVsDogsBundle\Document\Dog;
 
 /**
- * Interface ProviderInterface
- *
- * @package TimeInc\CatsVsDogsBundle\AnimalProvider
+ * Interface ProviderInterface.
  */
 interface ProviderInterface
 {

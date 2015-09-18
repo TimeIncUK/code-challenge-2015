@@ -3,9 +3,7 @@
 namespace TimeInc\CatsVsDogsBundle\Document;
 
 /**
- * Class Animal
- *
- * @package TimeInc\CatsVsDogsBundle
+ * Class Animal.
  */
 class Animal
 {
@@ -58,7 +56,7 @@ class Animal
      */
     public function setImageSrc($imageSrc)
     {
-        $this->imageSrc = null;
+        $this->imageSrc = $imageSrc;
     }
 
     /**
