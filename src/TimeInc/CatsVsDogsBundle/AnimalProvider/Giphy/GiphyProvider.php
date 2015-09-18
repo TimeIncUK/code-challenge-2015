@@ -20,6 +20,7 @@ class GiphyProvider implements ProviderInterface
 {
     const TYPE_CAT = 'cat';
     const TYPE_DOG = 'dog';
+    const TYPE_FISH = 'fish';
 
     /**
      * @var Client

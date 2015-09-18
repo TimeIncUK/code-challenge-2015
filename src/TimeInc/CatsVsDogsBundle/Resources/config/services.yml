@@ -5,5 +5,5 @@ services:
   animal_provider:
     class: TimeInc\CatsVsDogsBundles\AnimalProvider\Giphy\GiphyProvider
     arguments:
-      - @guzzle_clients
-      - %cats_vs_dogs.api_key%
+      - @guzzle_client
+      - %time_inc.cats_vs_dogs.api_key%
