@@ -3,9 +3,7 @@
 namespace TimeInc\CatsVsDogsBundle\Document;
 
 /**
- * Class Animal
- *
- * @package TimeInc\CatsVsDogsBundle
+ * Class Animal.
  */
 class Animal
 {

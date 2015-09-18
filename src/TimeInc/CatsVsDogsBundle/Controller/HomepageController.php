@@ -5,8 +5,7 @@ namespace TimeInc\CatsVsDogsBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Class HomepageController
- * @package TimeInc\CatsVsDogsBundle\Controller
+ * Class HomepageController.
  */
 class HomepageController extends Controller
 {
