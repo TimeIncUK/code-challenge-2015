@@ -58,7 +58,7 @@ class Animal
      */
     public function setImageSrc($imageSrc)
     {
-        $this->imageSrc = null;
+        $this->imageSrc = $imageSrc;
     }
 
     /**
