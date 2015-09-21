@@ -2,7 +2,7 @@
 
 namespace TimeInc\CatsVsDogsBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * Class HomepageController
@@ -10,13 +10,13 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class HomepageController extends Controller
 {
-    public function homepageAction(Request $request)
+    public function homepageAction()
     {
         $animalClient = $this->get('animal_provider');
 
-        return $this->render('TimeIncCatsVsDogsBundle:Default:homepage.html.twig', [
+        return $this->render('TimeIncCatsVsDogsBundle:Homepage:homepage.html.twig', [
             'cat' => $animalClient->fetchCat(),
-            'dog' => $animalClient->fetchCat(),
+            'dog' => $animalClient->fetchDog(),
         ]);
     }
 }
