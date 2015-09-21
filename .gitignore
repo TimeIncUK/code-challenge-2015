@@ -1,0 +1,10 @@
+.idea
+app/bootstrap.php.cache
+app/cache/dev/
+app/cache/prod/
+app/config/parameters.yml
+app/logs/dev.log
+app/logs/prod.log
+bin
+vendor
+web/bundles
