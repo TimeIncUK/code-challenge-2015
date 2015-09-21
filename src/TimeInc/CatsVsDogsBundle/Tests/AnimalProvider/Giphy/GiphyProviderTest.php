@@ -102,6 +102,16 @@ class GiphyProviderTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($imageWidth, $animal->getWidth());
         $this->assertEquals($imageHeight, $animal->getHeight());
     }
+
+    public function testInvalidAnimal()
+    {
+        $apiKey = 'this-is-an-api-key';
+        $provider = new PublicGiphyProvider($this->client, $apiKey);
+
+        $this->setExpectedException('\TimeInc\CatsVsDogsBundle\AnimalProvider\Exception\InvalidAnimalTypeException');
+
+        $provider->doApiRequestByPass('dodo');
+    }
 }
 
 /**
@@ -121,5 +131,23 @@ class ResponseFake
     public function getBody()
     {
         return $this->response;
+    }
+}
+
+class PublicGiphyProvider extends \TimeInc\CatsVsDogsBundle\AnimalProvider\Giphy\GiphyProvider
+{
+    /**
+     * Make a request to the API and return an animal
+     *
+     * @param $type
+     *
+     * @return \Psr\Http\Message\ResponseInterface
+     *
+     * @throws \TimeInc\CatsVsDogsBundle\AnimalProvider\Exception\AnimalRetrievalFailed
+     * @throws \TimeInc\CatsVsDogsBundle\AnimalProvider\Exception\InvalidAnimalTypeException
+     */
+    public function doApiRequestByPass($type)
+    {
+        return $this->doApiRequest($type);
     }
 }

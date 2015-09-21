@@ -17,7 +17,7 @@ class InvalidAnimalTypeException extends \Exception
      */
     public function __construct($attemptedType, array $expectedTypes, \Exception $previous = null)
     {
-        $message = 'Given type "'.$attemptedType.'" did not match requirements of ['.explode(', ', $expectedTypes).']';
+        $message = 'Given type "'.$attemptedType.'" did not match requirements of ['.implode(', ', $expectedTypes).']';
         parent::__construct($message, 0, $previous);
     }
 }
