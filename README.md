@@ -1,4 +1,6 @@
-# Win a new Apple TV at Symfony Live
+# This challenge is now closed.  Thanks to everyone who entered.
+
+## Win a new Apple TV at Symfony Live
 
 Fork this repo, get it running and send us a pull request to enter. We'll randomly pick a winner from all the entrants so don't worry if yours isn't perfect!
 
